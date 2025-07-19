@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Wishing Santa</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="container">
+    <h1 id="mainTitle">🎅 Wishing Santa</h1>
+    <p id="guidanceText">📝 Write your wish for today</p>
+
+    <div class="wish-area">
+      <input id="wishInput" type="text" placeholder="Enter your wish..." />
+      <button id="submitWish">Send to Santa</button>
+    </div>
+
+    <div id="wishlistPanel" class="hidden">
+      <h3>🎁 Your Wishes Today</h3>
+      <ul id="wishlistItems"></ul>
+    </div>
+
+    <button id="resetBtn" class="reset-button hidden">Reset Today's Wishes</button>
+
+    <div class="calendar-container">
+      <h2>📅 Wish Calendar</h2>
+      <div id="calendar" class="calendar"></div>
+    </div>
+
+    <button id="grantWishBtn">🎁 Grant My Wish</button>
+    <div id="giftBox" class="gift-box">
+      <div class="lid"></div>
+      <div class="box"></div>
+    </div>
+
+    <div id="motivationMessage" class="hidden"></div>
+
+    
+    <audio id="unwrapChime" src="santa_grants_your_wish.mp3" preload="auto"></audio>
+  </div>
+
+
+  <canvas id="snowCanvas"></canvas>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+
+

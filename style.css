@@ -1,0 +1,378 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: url('cute-christmas-laptop-xqo3unis2ogp0098.jpg');
+  background-size: 400% 400%;
+  animation: backgroundShift 15s ease infinite;
+  color: #333;
+}
+
+@keyframes backgroundShift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+.container {
+  max-width: 600px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(255, 255, 255, 0.4);
+  text-align: center;
+}
+
+
+#mainTitle {
+  font-size: 2.5rem;
+  color: #8f66c3;
+  text-shadow: 0 0 10px rgba(143, 102, 195, 0.5);
+}
+
+#guidanceText {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #555;
+}
+
+h3 {
+  color: #6c3aa6;
+  text-shadow: 0 0 6px rgba(108, 58, 166, 0.4);
+}
+
+
+.wish-area {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+#wishInput {
+  padding: 0.6rem;
+  font-size: 1rem;
+  width: 60%;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  outline: none;
+  background: #fff;
+}
+
+button {
+  padding: 0.6rem 1rem;
+  font-size: 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  background: linear-gradient(135deg, #b28fe9, #f1bbee);
+  color: #fff;
+  box-shadow: 0 4px 8px rgba(178, 143, 233, 0.4);
+  transition: transform 0.2s ease;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+
+#resetBtn,
+.reset-button {
+  margin-top: 1rem;
+  background: #ffb6c1;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  transition: background 0.3s ease;
+}
+
+#resetBtn:hover,
+.reset-button:hover {
+  background: #ff6f91;
+}
+
+
+.calendar-container {
+  margin-top: 2rem;
+}
+
+.calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 10px;
+  margin-top: 1rem;
+}
+
+.calendar-day {
+  background: #fff;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-weight: bold;
+  color: #8b6fc3;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.calendar-day.wished {
+  background: #dfc6ff;
+  color: #4b2a7b;
+  box-shadow: 0 0 10px rgba(169, 109, 255, 0.4);
+}
+
+
+#wishlistPanel {
+  margin-top: 1rem;
+  text-align: left;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(108, 58, 166, 0.2);
+}
+
+#wishlistItems li {
+  list-style: none;
+  padding: 5px 0;
+  color: #333;
+}
+
+
+.gift-box {
+  width: 150px;
+  height: 150px;
+  margin: 2rem auto;
+  position: relative;
+  display: none;
+  animation: bounce 1s ease;
+}
+
+.lid {
+  width: 100%;
+  height: 50px;
+  background: #f66;
+  position: absolute;
+  top: 0;
+  transform-origin: top center;
+  transition: transform 0.6s ease;
+  z-index: 2;
+}
+
+.box-body {
+  width: 100%;
+  height: 100%;
+  background: #faa;
+  position: absolute;
+  bottom: 0;
+  z-index: 1;
+}
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+
+
+.motivation {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+  color: #7b3fcf;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 10px;
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.motivation.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+
+.wish-glow {
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+@keyframes glow {
+  from {
+    box-shadow: 0 0 10px #fff5cc, 0 0 20px #ffd580;
+  }
+  to {
+    box-shadow: 0 0 20px #ffeb99, 0 0 30px #ffc107;
+  }
+}
+
+
+.hidden {
+  display: none;
+}
+
+.reset-button {
+  margin: 20px auto;
+  padding: 10px 20px;
+  font-size: 1rem;
+  background: #ffcccc;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  display: block;
+  transition: all 0.3s ease;
+}
+
+@media (max-width: 600px) {
+  .reset-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+}
+.wish-text {
+  transition: all 0.3s ease;
+}
+
+li.granted {
+  color: #4caf50;
+  font-weight: bold;
+  transform: scale(1.02);
+}
+.gift-box {
+  position: relative;
+  width: 120px;
+  height: 120px;
+  margin: 2rem auto;
+  cursor: pointer;
+  transition: transform 0.4s ease;
+}
+
+.gift-box .lid,
+.gift-box .box {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom right, #ffafcc, #cdb4db);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.gift-box .lid {
+  top: 0;
+  background: linear-gradient(to top left, #a2d2ff, #ffc8dd);
+  z-index: 2;
+  transition: all 0.6s ease;
+}
+
+.gift-box.open .lid {
+  transform: rotateX(75deg) translateY(-60px);
+  opacity: 0;
+}
+
+.gift-box .box {
+  bottom: 0;
+  background: linear-gradient(to bottom, #ffe5ec, #ffcad4);
+  z-index: 1;
+}
+.snow-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 999;
+}
+
+.snowflake {
+  position: absolute;
+  top: -2em;
+  color: white;
+  animation-name: fall;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0deg);
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+  }
+}
+
+.gift-box {
+  width: 120px;
+  height: 120px;
+  position: relative;
+  margin: 40px auto;
+  cursor: pointer;
+  transition: transform 0.4s ease-in-out;
+}
+
+.gift-box .box {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, #ffd1dc, #fff1f2);
+  border-radius: 12px;
+  position: relative;
+  z-index: 1;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.gift-box .lid {
+  width: 100%;
+  height: 40px;
+  background: linear-gradient(135deg, #ff4e50, #f9d423);
+  position: absolute;
+  top: -20px;
+  left: 0;
+  border-radius: 10px 10px 0 0;
+  z-index: 2;
+  transition: transform 0.6s ease-in-out;
+  transform-origin: bottom center;
+}
+
+
+.gift-box.open .lid {
+  transform: rotateX(75deg) translateY(-20px);
+}
+
+
+#motivationMessage {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #fff1f2, #ffe8ec);
+  border-radius: 12px;
+  color: #b3003c;
+  font-weight: bold;
+  box-shadow: 0 0 8px #ffb6c1;
+  animation: fadeInUp 0.8s ease forwards;
+  max-width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+#motivationMessage.hidden {
+  display: none;
+}
+
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
